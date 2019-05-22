@@ -25,7 +25,7 @@ public class Basic implements Serializable {
     private String name;
 
     @Column
-    private String lable;
+    private String label;
 
     @Column
     private String email;
@@ -40,9 +40,9 @@ public class Basic implements Serializable {
     private LocalDateTime updatedDate;
 
     @Builder
-    public Basic(String name, String lable, String email, String phone, LocalDateTime createdDate, LocalDateTime updatedDate) {
+    public Basic(String name, String label, String email, String phone, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.name = name;
-        this.lable = lable;
+        this.label = label;
         this.email = email;
         this.phone = phone;
         this.createdDate = createdDate;

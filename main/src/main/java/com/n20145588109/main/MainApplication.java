@@ -44,17 +44,15 @@ public class MainApplication {
                     .updatedDate(LocalDateTime.now())
                     .build());
 
-            ThreadLocalRandom.current().ints(1, 100).boxed().limit(20).forEach(x -> {
+            ThreadLocalRandom.current().ints(50, 100).boxed().limit(20).forEach(x -> {
                 basicRepository.save(Basic.builder()
                         .name("김씨" + x)
-                        .lable("몰라")
+                        .label("몰라")
                         .email(x * x + "@gmail.com")
-                        .phone((x * 3) + "-" + (x * 25) + "-" + (x * 99))
+                        .phone((x * 3) + "-" + (x * 48) + "-" + (x * 99))
                         .createdDate(LocalDateTime.now())
                         .updatedDate(LocalDateTime.now())
                         .build());
-
-
             });
         };
     }

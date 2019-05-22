@@ -18,12 +18,12 @@
             <div class="col-lg-10">
                 <div class="page-header">
                     <h1 id="tables">Basic 목록</h1>
+                    <button onclick="location.href ='/add'" type="button" class="btn btn-outline-success">Enrollment</button>
                 </div>
-
-                <div class="bs-component">
+                <div class="bs-component" style="margin-top: 1%">
                     <table class="table table-hover">
                         <thead>
-                        <tr>
+                        <tr class="table-active">
                             <th scope="col">#</th>
                             <th scope="col">이름</th>
                             <th scope="col">직책</th>
@@ -35,7 +35,7 @@
                         <tr th:each="basic : ${basicList}">
                             <th th:text="${basic.getIdx()}"></th>
                             <th th:text="${basic.getName()}"></th>
-                            <th th:text="${basic.getLable()}"></th>
+                            <th th:text="${basic.getLabel()}"></th>
                             <th th:text="${basic.getEmail()}"></th>
                             <th th:text="${basic.getPhone()}"></th>
                         </tr>

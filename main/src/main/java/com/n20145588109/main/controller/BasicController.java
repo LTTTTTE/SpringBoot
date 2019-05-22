@@ -5,6 +5,9 @@ import com.n20145588109.main.repository.BasicRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.time.LocalDateTime;
 
 @Controller
 public class BasicController {
@@ -24,6 +27,15 @@ public class BasicController {
     @GetMapping("/add")
     public String add(Basic basic){
         return "add";
+    }
+
+    @PostMapping("/new")
+    public String post(Basic basic , Model model){
+        basic.setCreatedDate(LocalDateTime.now());
+        basic.setUpdatedDate(LocalDateTime.now());
+        Basic savedBasic = basicRepository.save(basic);
+        model.addAttribute("basic",basicRepository.findById(savedBasic.getIdx()).orElse(null));
+        return "basic";
     }
 
 }
