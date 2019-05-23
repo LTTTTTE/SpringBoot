@@ -37,7 +37,6 @@ public class Profile implements Serializable {
     private LocalDateTime updatedDate;
 
     @Builder
-
     public Profile(String network, String userName, String url, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.network = network;
         this.userName = userName;

@@ -43,8 +43,15 @@ public class MainApplication {
                     .createdDate(LocalDateTime.now())
                     .updatedDate(LocalDateTime.now())
                     .build());
+            profileRepository.save(Profile.builder()
+                    .network("Google")
+                    .userName("@LTTTTTE")
+                    .url("https://www.google.com/@LTTTTTE")
+                    .createdDate(LocalDateTime.now())
+                    .updatedDate(LocalDateTime.now())
+                    .build());
 
-            ThreadLocalRandom.current().ints(50, 100).boxed().limit(20).forEach(x -> {
+            ThreadLocalRandom.current().ints(50, 100).boxed().limit(5).forEach(x -> {
                 basicRepository.save(Basic.builder()
                         .name("김씨" + x)
                         .label("몰라")

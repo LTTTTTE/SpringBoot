@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>정보</title>
+    <title>2014558109 정주용</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,6 +62,10 @@
                                         <input th:value="${basic.getPhone()}" type="text" readonly class="form-control-plaintext" id="phone" value="">
                                     </div>
                                 </div>
+                                <button onclick="location.href ='/'" style="float: left" type="button" class="btn btn-outline-secondary">Go Back</button>
+                                <button th:onclick="'location.href = \'/basic/remove/' + ${basic.getIdx()} + '\''" style="float: right; margin-left: 20px" type="button" class="btn btn-outline-danger">Delete</button>
+                                <button th:onclick="'location.href = \'/basic/edit/' + ${basic.getIdx()} + '\''" style="float: right" type="button" class="btn btn-outline-warning">Modify</button>
+
                             </fieldset>
                         </form>
                     </div>

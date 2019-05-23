@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>2014558109 정주용</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css/" media="screen">
+    <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css/">
+</head>
+<body>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="bs-docs-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="bs-component">
+                    <form action="#" th:action="@{/basic/new}" th:object="${basic}" method="post">
+                        <fieldset>
+                            <legend>정보입력</legend>
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="nameForm">Your Name</label>
+                                <input th:field="*{name}" type="text" class="form-control" id="nameForm" aria-describedby="nameHelp" placeholder="홍길동">
+                                <small id="nameFormHelp" class="form-text text-muted">2자이상 6자까지 허용</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="labelForm">Position</label>
+                                <input th:field="*{label}" type="text" class="form-control" id="labelForm" aria-describedby="labelHelp" placeholder="혹시 직책이..?">
+                                <small id="labelFormHelp" class="form-text text-muted">ex) 사원 ,대리</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailForm">Email Address</label>
+                                <input th:field="*{email}" type="email" class="form-control" id="emailForm" aria-describedby="emailHelp" placeholder="email@example.com">
+                                <small id="emailFormHelp" class="form-text text-muted">We'll share your email with everyone.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneForm">Your Phone Number</label>
+                                <input th:field="*{phone}" type="text" class="form-control" id="phoneForm" aria-describedby="phoneHelp" placeholder="000-0000-0000">
+                                <small id="phoneFormHelp" class="form-text text-muted"></small>
+                            </div>
+                            <button onclick="location.href ='/'" style="float: left" type="button" class="btn btn-outline-secondary">Go Back</button>
+                            <button style="float: right" type="submit" class="btn btn-outline-success">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23019901-1']);
+    _gaq.push(['_setDomainName', "bootswatch.com"]);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
