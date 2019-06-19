@@ -23,9 +23,13 @@ public class Dbtest03Application {
     public CommandLineRunner commandLineRunner(CarRepository carRepository, ParkingLotRepository parkingLotRepository) {
         return args -> {
 
-            ParkingLot parkingLot = new ParkingLot();
-            parkingLot.setName("비싼주차장");
-            parkingLotRepository.save(parkingLot);
+            ParkingLot parkingLot = parkingLotRepository.save(ParkingLot.builder()
+                    .name("비싼주차장")
+                    .build());
+
+            ParkingLot parkingLot2 = parkingLotRepository.save(ParkingLot.builder()
+                    .name("좋은주차장")
+                    .build());
 
             IntStream.rangeClosed(1, 10).forEach(x->{
                 carRepository.save(Car.builder()
@@ -34,9 +38,7 @@ public class Dbtest03Application {
                         .build()
                 );
             });
-            ParkingLot parkingLot2 = parkingLotRepository.save(ParkingLot.builder()
-                    .name("좋은주차장")
-                    .build());
+
 
         };
     }

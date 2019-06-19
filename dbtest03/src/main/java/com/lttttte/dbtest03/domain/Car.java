@@ -26,8 +26,7 @@ public class Car {
     @Builder
     public Car(String name, ParkingLot parkingLot) {
         this.name = name;
-        this.parkingLot = parkingLot;
-        parkingLot.getCarSet().add(this);
+        setParkingLot(parkingLot);
     }
 
     public void setParkingLot(ParkingLot parkingLot){

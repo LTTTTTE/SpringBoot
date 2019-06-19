@@ -37,8 +37,8 @@ public class CarParkingLotRelationTest {
             car1.setParkingLot(parkingLot);
         });
 
-        assertThat(carRepository.findById(5L).orElse(null).getParkingLot().getName()).isEqualTo("좋은주차장");
-
+        assertThat(carRepository.findById(5L).map(Car::getParkingLot).map(ParkingLot::getName).orElse("디폴트주차장")).isEqualTo("좋은주차장");
+        showDBTest();
     }
 
     @Test
