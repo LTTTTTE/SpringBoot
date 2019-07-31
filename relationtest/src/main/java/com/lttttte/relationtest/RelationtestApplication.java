@@ -18,8 +18,8 @@ public class RelationtestApplication {
     public CommandLineRunner commandLineRunner (PlayerRepository playerRepository){
         return args ->{
             playerRepository.save(Player.builder()
-                    .loginId("testid1")
-                    .loginPw("testpw1")
+                    .loginId("test")
+                    .loginPw("test")
                     .build());
         };
     }
